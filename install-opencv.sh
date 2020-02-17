@@ -1,9 +1,12 @@
 #!/bin/bash
-
+#installed on ubuntu18.04 for c++
+#compiling code https://www.learnopencv.com/how-to-compile-opencv-sample-code/
+#adapted from https://www.learnopencv.com/install-opencv3-on-ubuntu/
 echo "Installing the latest OpenCV for C++."
 
 #this is where opencv will be located
 target_dir=/usr/local
+sh
 
 # # echo "Updating packages and downloading dependencies..."
 #update sys packages
@@ -85,6 +88,8 @@ sudo 'export PKG_CONFIG_PATH="{$PKG_CONFIG_PATH}:/usr/local/opencv/installation/
 sudo ldconfig
 
 sudo sh -c 'echo "/usr/local/lib/x86_64-linux-gnu" >> /etc/ld.so.conf.d/opencv4.conf'
+sudo ln -s  /usr/lib/x86_64-linux-gnu/libproj.so.9 /usr/lib/x86_64-linux-gnu/libproj.so
+
 
 #if installed correctly, this will print a list of libraries
 pkg-config --cflags --libs opencv4

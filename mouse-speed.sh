@@ -9,6 +9,8 @@
 # If you have a mouse with complications or special needs,
 # use the command xev to find what your wheel does.
 #
+#to install imwheel use: sudo apt-get install imwheel zenity
+#
 ### see if imwheel config exists, if not create it ###
 if [ ! -f ~/.imwheelrc ]
 then
